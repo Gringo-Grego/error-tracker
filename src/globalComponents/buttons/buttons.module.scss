@@ -1,0 +1,26 @@
+@import '../../styling/variables';
+.button{
+    background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	background-color: $color-primary-dark;
+	color:$color-white;
+	padding:5px 10px 5px 10px;
+	border-radius: 5px;
+	&:hover{
+		background-color:$color-secondary-dark;
+		// color:$color-primary-dark;
+	}
+	&:disabled{
+		background-color: $color-primary-dark;
+		cursor:not-allowed;
+	}
+	&:focus{
+		outline: 0;
+	}
+
+	
+}
