@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './forms.module.scss';
+import styles from './forms.module.css';
 
-const InputGroup = ({ label, value, handleChange, handleBlur, placeholder, name, errors, touched }) => {
+const InputGroup = ({ label, value, handleChange, handleBlur, placeholder, name, errors, touched, type}) => {
 
     return (
         <div className={styles.inputGroup}>
@@ -13,6 +13,7 @@ const InputGroup = ({ label, value, handleChange, handleBlur, placeholder, name,
                 onBlur={handleBlur}
                 className={styles.formInput}
                 placeholder={placeholder}
+                type={type}
                 
             />
             {errors[name] && touched[name] && errors[name]}

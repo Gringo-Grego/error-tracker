@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './buttons.module.scss';
+import styles from './buttons.module.css';
 
 function GlobalButton({ content, disabled, onClick, customStyles, type, kind }) {
 
