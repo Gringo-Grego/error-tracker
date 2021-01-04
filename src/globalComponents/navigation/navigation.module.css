@@ -1,0 +1,12 @@
+.topnavMain{
+    display: flex;
+    justify-content:space-between;
+}
+.topnavSection{
+    /* border: 1px solid black; */
+}
+
+.topnavButtons{
+    display: flex;
+
+}

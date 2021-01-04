@@ -5,8 +5,10 @@ import globalStyles from '../../styling/globalStyles.module.css';
 import InputErrorMessage from '../../globalComponents/forms/InputErrorMessage';
 import axios from 'axios';
 import Toast from '../../globalComponents/Toast/Toast';
+import auth from '../../auth/auth';
+import { withRouter } from 'react-router-dom';
 
-const Login = () => {
+const Login = ({history}) => {
     const [toastList, setToastList] = useState([]);
 
     const validatePassword = (val, errors) => {
@@ -22,19 +24,23 @@ const Login = () => {
         return errors;
     }
     const attepmtLogin = async (values) => {
-        let URL = `${process.env.REACT_APP_API_URL}/login`;
-        try {
-            await axios.post(URL, values);
-        }
-        catch (e) {
-            console.log(e);
-            setToastList([...toastList, ...[{
-                id: Date.now(),
-                title: "Error",
-                description: "Wrong User Credentials",
-                backgroundColor: "var(--color-danger)",
-            }]])
-        }
+        // let URL = `${process.env.REACT_APP_API_URL}/login`;
+        // try {
+        //     await axios.post(URL, values);
+        // }
+        // catch (e) {
+        //     console.log(e);
+        //     setToastList([...toastList, ...[{
+        //         id: Date.now(),
+        //         title: "Error",
+        //         description: "Wrong User Credentials",
+        //         backgroundColor: "var(--color-danger)",
+        //     }]])
+        // }
+        localStorage.setItem('token', `123456`)
+        // localStorage.setItem('user', JSON.stringify(user));
+        auth.handleLoginSuccess(() => { history.push(`/dashboard`) });
+
     }
     return (
         <div className={styles.main}>
@@ -52,16 +58,17 @@ const Login = () => {
                     },
                     { name: 'password', label: "Password", validate: validatePassword, type: "password" }
                     ]} />
-                <Toast
+                
+            </div>
+            </div>
+            <Toast
                     toastList={toastList}
                     position={"top_right"}
                     autoDelete={true}
                     dismissTime={3500}
                 />
-            </div>
-            </div>
         </div>
     )
 }
 
-export default Login;
+export default withRouter(Login);
