@@ -17,19 +17,32 @@ function GlobalButton({ content, disabled, onClick, customStyles, type, kind }) 
                     {content}
                 </button>
             )
-        default :
-        return (
-            <button
-                type={type}
-                className={styles.button}
-                style={customStyles}
-                // style={{backgroundColor:'red'}}
-                disabled={disabled}
-                onClick={onClick}
-            >
-                {content}
-            </button>
-        )
+        case 'rectangle':
+            return (
+                <button
+                    type={type}
+                    className={`${styles.button} ${styles.rectangle}`}
+                    style={customStyles}
+                    // style={{backgroundColor:'red'}}
+                    disabled={disabled}
+                    onClick={onClick}
+                >
+                    {content}
+                </button>
+            )
+        default:
+            return (
+                <button
+                    type={type}
+                    className={styles.button}
+                    style={customStyles}
+                    // style={{backgroundColor:'red'}}
+                    disabled={disabled}
+                    onClick={onClick}
+                >
+                    {content}
+                </button>
+            )
     }
 }
 

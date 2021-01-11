@@ -11,15 +11,19 @@
 	border-radius: 5px;
 
 }
-.button hover{
+.button:hover{
 	background-color:var(--color-secondary-dark);
+	/* background-color:red; */
 }
 
-.button :disabled{
+.button:disabled{
 	background-color: var(--color-primary-dark);
 	cursor:not-allowed;
 }
-.button :focus{
-	background-color: var(--color-primary-dark);
-	cursor:not-allowed;
+.button:focus{
+	/* background-color: var(--color-primary-dark); */
+	/* cursor:not-allowed; */
+}
+.rectangle{
+	border-radius: 0px;
 }
