@@ -6,14 +6,13 @@ import styles from './Dashboard.module.css';
 
 const Dashboard = () => {
     return (
-        <div className = {styles.main}>
-            
-            <h1>Hello from the Dashboard</h1>
+        <div className={styles.main}>
+            Hello from the Dashboard
             <Card>
-                <p>I AM HAPPY</p>
+                <p>TESTING MY JOY</p>
             </Card>
-
         </div>
+
     )
 }
 export default Dashboard;

@@ -12,6 +12,8 @@ export const THEMES = {
         '--color-warning': COLORS.YELLOW,
         '--color-background': COLORS.WHITE,
         '--color-font': COLORS.BLACK,
+        '--color-shadow':COLORS.DARK_SHADOW
+
     },
     dark: {
         '--color-danger': COLORS.PINK,
@@ -22,7 +24,8 @@ export const THEMES = {
         '--color-secondary-dark': COLORS.DARK_YELLOW,
         '--color-warning': COLORS.YELLOW,
         '--color-background': COLORS.CHARCOAL,
-        '--color-font': COLORS.WHITE
+        '--color-font': COLORS.WHITE,
+        '--color-shadow':'white'
     }
 
 }

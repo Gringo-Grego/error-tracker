@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import Topnav from "../navigation/Topnav";
+import styles from './auth.module.css'
 // import auth from "./auth";
 
 export const ProtectedRoute = ({
@@ -16,7 +17,7 @@ export const ProtectedRoute = ({
         if (localStorage.getItem("token")) {
           // alert(localStorage.getItem("token"))
         //   if(localStorage.getItem('user')){
-            return <div>
+            return <div className = {styles.main}>
               {hideTopNav?null:<Topnav />}
               <Component {...props} />
               </div>;

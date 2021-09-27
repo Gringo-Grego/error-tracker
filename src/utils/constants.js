@@ -9,5 +9,7 @@ export const COLORS = {
     WHITE_LED:'#ecf0f5',
     PINK:'#ffc0cb',
     BLACK:'#000',
-    CHARCOAL:'#212121'
+    CHARCOAL:'#212121',
+    DARK_SHADOW:'rgba(0,0,0,0.2)',
+    LIGHT_SHADOW:'rgba(0,0,0,0.2)'
 }

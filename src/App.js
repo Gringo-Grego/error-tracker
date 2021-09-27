@@ -23,7 +23,7 @@ function App() {
       <Router>
         <ThemeContext.Provider value={{theme, setTheme}}>
           <Switch >
-            <ProtectedRoute exact path="/dashboard" component={Dashboard}/>
+            <ProtectedRoute exact path="/dashboard" component={Dashboard} />
             <ProtectedRoute exact path="/settings" component={Settings} />
             <Route exact path="/">
               <Login />
