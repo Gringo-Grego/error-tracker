@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './buttons.module.css';
+import styles from './button.module.css';
 
-function GlobalButton({ content, disabled, onClick, customStyles, type, kind }) {
+const Button =({ content, disabled, onClick, customStyles, type, kind }) => {
 
     switch (kind) {
         case 'round':
@@ -33,4 +33,4 @@ function GlobalButton({ content, disabled, onClick, customStyles, type, kind }) 
     }
 }
 
-export default GlobalButton;
+export default Button;

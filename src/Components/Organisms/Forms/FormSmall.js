@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik } from 'formik';
 import styles from './forms.module.css';
 import InputGroup from './InputGroup';
-import GlobalButton from '../buttons/GlobalButton';
+import GlobalButton from '../../Atoms/Button/Button';
 
 const FormSmall = ({ title, initialValues, fields, handleSubmit }) => {
     //FormSmall takes in "initialValues"-an object with keys that match the fields and "fields"-an array of objects. 

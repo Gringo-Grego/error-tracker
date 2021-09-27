@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import FormSmall from '../../globalComponents/forms/FormSmall';
+import FormSmall from '../../Components/Organisms/Forms/FormSmall';
 import styles from './Login.module.css';
 import globalStyles from '../../styling/globalStyles.module.css';
-import InputErrorMessage from '../../globalComponents/forms/InputErrorMessage';
+import InputErrorMessage from '../../Components/Organisms/Forms/InputErrorMessage';
 import axios from 'axios';
-import Toast from '../../globalComponents/Toast/Toast';
+import Toast from '../../Components/Organisms/Toast/Toast';
 import auth from '../../auth/auth';
 import { withRouter } from 'react-router-dom';
 

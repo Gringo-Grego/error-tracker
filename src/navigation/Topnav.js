@@ -1,19 +1,19 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import GlobalButton from '../buttons/GlobalButton';
+import Button from '../Components/Atoms/Button/Button';
 import styles from './navigation.module.css';
-
+// import { ThemeContext } from '../Contexts/ThemeContext';
 const Topnav = ({history})=>{
-
+// const {theme} 
     return (
         <div className={styles.topnavMain}>
             <div className={styles.topnavSection}></div>
             <div className={styles.topnavSection}></div>
             <div className={`${styles.topnavSection} ${styles.topnavButtons}`}>
                
-                <GlobalButton content={"Dashboard"} onClick={()=>{history.push('dashboard')}}/>
-                <GlobalButton content={"Settings"} onClick={()=>{history.push('settings')}}/>
-                <GlobalButton content={"Logout"} onClick={()=>{history.push('logout')}}/>
+                <Button content={"Dashboard"} onClick={()=>{history.push('dashboard')}}/>
+                <Button content={"Settings"} onClick={()=>{history.push('settings')}}/>
+                <Button content={"Logout"} onClick={()=>{history.push('logout')}}/>
 
                 {/* content, disabled, onClick, customStyles, type, kind */}
             </div>
